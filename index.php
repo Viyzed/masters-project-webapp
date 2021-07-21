@@ -10,8 +10,8 @@
 <body>
 	<nav> 
 		<ul>
-			<li> <a href="login.php" title="Login to an existing account.">Login</a></li>
 			<li> <a href="signup.php" title="Create a new account.">Signup</a></li>
+			<li> <a href="login.php" title="Login to an existing account.">Login</a></li>
 		</ul>
 	</nav>
 	
