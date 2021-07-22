@@ -1,3 +1,4 @@
+<?php include('scripts/db.php'); ?>
 <!doctype html>
 <html>
 <head>
@@ -26,7 +27,7 @@
                         <input type="password" name="password">
                 </div>
                 <div id="user-input">
-                        <button type="submit" name=login" id="btn">Sign In</button>
+                        <button type="submit" name="login" id="btn">Sign In</button>
                 </div>
 
                 <p>Don't have an account? <a href="signup.php">Sign Up</a></p>
