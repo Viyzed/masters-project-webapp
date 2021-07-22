@@ -1,5 +1,6 @@
 <?php 
 	include('scripts/db.php');
+	include('scripts/weather.php');
 ?>
 
 <!doctype html>
@@ -16,7 +17,7 @@
 		<ul>
 			<li> <a href="signup.php" title="Create a new account.">Signup</a></li>
 			<li> <a href="login.php" title="Login to an existing account.">Login</a></li>
-			<li> <a href="#" title="About thie webapp.">About</a></li>
+			<li> <a href="about.php" title="About thie webapp.">About</a></li>
 		</ul>
 	</nav>
 	
@@ -41,17 +42,19 @@
                 <?php endif ?>
 	</div>
 
-	
-	<!-- Unordered list for selecting country to get weather information -->
-	<ul id="country-list">
-		<li><a>Edinburgh</a></li>
-		<li><a>London</a></li>
-		<li><a>Belfast</a></li>
-		<li><a>Dublin</a></li>
-		<li><a>Cardiff</a></li>
-		<li><a>Aberdeen</a></li>
-		<li><a>Turriff</a></li>
-	</ul>
+	<div id="container">
+		<form method="get" id="weather_form">
+			<!-- Unordered list for selecting country to get weather information -->
+		<ul id="country-list">
+			<li><input type="button" name="edinburgh" formmethod="get" id="weather_btn">Edinburgh</button></li>
+			<li><input type="button" name="london" formmethod="get" id="weather_btn">London</button></li>
+			<li><input type="button" name="belfast" formmethod="get" id="weather_btn">Belfast</button></li>
+			<li><input type="button" name="dublin" formmethod="get" id="weather_btn">Dublin</button></li>
+			<li><input type="button" name="cardiff" formmethod="get" id="weather_btn">Cardiff</button></li>
+			<li><input type="button" name="aberdeen" formmethod="get" id="weather_btn">Aberdeen</button></li>
+			<li><input type="button" name="turriff" formmethod="get" id="weather_btn">Turriff</button></li>
+		</ul>
+	</div>
 </body>
 </html>
 

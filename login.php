@@ -4,6 +4,7 @@
 <head>
 	<title>LogIn</title>
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<?php if(isset($_SESSION['username'])) { header('location: index.php'); } ?>
 </head>
 
 <body>
@@ -12,7 +13,7 @@
                 <ul>
                         <li> <a href="index.php" title="Go to homepage.">Home</a></li>
                         <li> <a href="signup.php" title="Create an  account.">Signup</a></li>
-                        <li> <a href="#" title="About thie webapp.">About</a></li>
+                        <li> <a href="about.php" title="About thie webapp.">About</a></li>
                 </ul>
 	</nav>
 

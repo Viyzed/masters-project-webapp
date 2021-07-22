@@ -14,9 +14,23 @@ body {
 	flex-direction: column;
 }
 
+/* This should be city-list but it was too late to change it. */
 #country-list {
 	width: 30%;
 	margin: 0px auto;
+}
+
+
+#weather_btn {
+        background: #8f8f8f;
+        padding: 10px 10px;
+        color: white;
+	font-size: 20px;
+	border: none;
+}
+
+#weather_btn:hover {
+        background: #4d4d4d;
 }
 
 ul {
@@ -58,6 +72,18 @@ nav li a:hover {
 	color: #8f8f8f;
 	font-size: 40px;
 	font-family: Verdana;
+}
+
+#container {
+	display: flex;
+        flex-direction: column;
+	text-align: center;
+	width: 40%;
+	margin: 20px auto;
+	padding: 20px;
+	border: 2px solid #cfcfcf;
+	background: #8f8f8f;
+	border-radius: 10px 10px 10px 10px;
 }
 
 form {	
