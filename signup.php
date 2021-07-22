@@ -19,7 +19,7 @@
 
 	<!-- Signup form -->
         <h2 id="title">Sign Up</h2>
-	<form method="post" action="signup.php">
+	<form id="user_form" method="post" action="signup.php">
 		<!-- handle form errors -->
 		<?php include('scripts/errors.php'); ?>
 		<div id="user-input">

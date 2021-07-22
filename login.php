@@ -18,7 +18,7 @@
 	</nav>
 
 	<h2 id ="title">Log In</h2>
-	<form method="post" action="login.php">
+	<form id="user_form" method="post" action="login.php">
 		<?php include('scripts/errors.php'); ?>
 		<div id="user-input">
                         <label>Username</label>

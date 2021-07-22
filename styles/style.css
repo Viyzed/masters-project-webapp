@@ -86,7 +86,13 @@ nav li a:hover {
 	border-radius: 10px 10px 10px 10px;
 }
 
-form {	
+#api_return {
+	font-family: Verdana;
+	font-size: 26px;
+	background-color: #4d4d4d;
+}
+
+#user_form {	
 	text-align: center;
 	width: 30%;
 	margin: 0px auto;

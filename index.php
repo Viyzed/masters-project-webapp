@@ -1,6 +1,5 @@
 <?php 
 	include('scripts/db.php');
-	include('scripts/weather.php');
 ?>
 
 <!doctype html>
@@ -42,18 +41,22 @@
                 <?php endif ?>
 	</div>
 
+
 	<div id="container">
-		<form method="get" id="weather_form">
-			<!-- Unordered list for selecting country to get weather information -->
+		<form method="get">
+		<?php include('scripts/weather.php'); ?>
+		<label id="api_return"><?php echo($_SESSION['city_weather']); ?></label>
+		<!-- Unordered list for selecting country to get weather information -->
 		<ul id="country-list">
-			<li><input type="button" name="edinburgh" formmethod="get" id="weather_btn">Edinburgh</button></li>
-			<li><input type="button" name="london" formmethod="get" id="weather_btn">London</button></li>
-			<li><input type="button" name="belfast" formmethod="get" id="weather_btn">Belfast</button></li>
-			<li><input type="button" name="dublin" formmethod="get" id="weather_btn">Dublin</button></li>
-			<li><input type="button" name="cardiff" formmethod="get" id="weather_btn">Cardiff</button></li>
-			<li><input type="button" name="aberdeen" formmethod="get" id="weather_btn">Aberdeen</button></li>
-			<li><input type="button" name="turriff" formmethod="get" id="weather_btn">Turriff</button></li>
+			<li><input name="city" type="submit" id="weather_btn" value="Edinburgh"></li>
+			<li><input name="city" type="submit" id="weather_btn" value="London"></li>
+			<li><input name="city" type="submit" id="weather_btn" value="Belfast"></li>
+			<li><input name="city" type="submit" id="weather_btn" value="Dublin"></li>
+			<li><input name="city" type="submit" id="weather_btn" value="Cardiff"></li>
+			<li><input name="city" type="submit" id="weather_btn" value="Aberdeen"></li>
+			<li><input name="city" type="submit" id="weather_btn" value="Turriff"></li>
 		</ul>
+		</form>
 	</div>
 </body>
 </html>

@@ -86,7 +86,6 @@
 			if($count_rows > 0) {
 				//sign user in
                         	$_SESSION['username'] = $username;
-                        	$_SESSION['success'] = ("Welcome,  $username");
                         	header('location: index.php'); //redirect to the home page
 			} else {
 				echo("Login unsuccessful.");
