@@ -28,7 +28,7 @@ nav {
 	margin: 50px auto 0px;
 	color: white;
 	list-style-type: none;
-	display: flex; 
+	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	border: 1px solid #cfcfcf;
@@ -68,6 +68,16 @@ form {
 	border: 2px solid #cfcfcf;
 	background: white;
 	border-radius: 10px 10px 10px 10px;
+}
+
+#error {
+	background: #f2dede;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+#error p {
+	color: #a94442;
 }
 
 form p {

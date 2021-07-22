@@ -18,6 +18,7 @@
 
 	<h2 id ="title">Log In</h2>
 	<form method="post" action="login.php">
+		<?php include('scripts/errors.php'); ?>
 		<div id="user-input">
                         <label>Username</label>
                         <input type="text" name="username">

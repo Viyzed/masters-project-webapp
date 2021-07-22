@@ -50,7 +50,7 @@
 		<li><a>Dublin</a></li>
 		<li><a>Cardiff</a></li>
 		<li><a>Aberdeen</a></li>
-		<li><a>Lerwick</a></li>
+		<li><a>Turriff</a></li>
 	</ul>
 </body>
 </html>
