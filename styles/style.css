@@ -20,7 +20,6 @@ body {
 	margin: 0px auto;
 }
 
-
 #weather_btn {
         background: #8f8f8f;
         padding: 10px 10px;
@@ -88,8 +87,10 @@ nav li a:hover {
 
 #api_return {
 	font-family: Verdana;
-	font-size: 26px;
+	font-size: 20px;
 	background-color: #4d4d4d;
+	padding: 1px 1px 1px 1px;
+	border-radius: 5px 5px 5px 5px;
 }
 
 #user_form {	

@@ -43,7 +43,7 @@
 
 
 	<div id="container">
-		<form method="get">
+		<form id="country_form" method="get">
 		<?php include('scripts/weather.php'); ?>
 		<label id="api_return"><?php echo($_SESSION['city_weather']); ?></label>
 		<!-- Unordered list for selecting country to get weather information -->
