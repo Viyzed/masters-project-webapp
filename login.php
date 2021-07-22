@@ -6,8 +6,17 @@
 </head>
 
 <body>
-	<h2>Log In</h2>
-	<form method="post" action="signin.php">
+
+	<nav>
+                <ul>
+                        <li> <a href="index.php" title="Go to homepage.">Home</a></li>
+                        <li> <a href="signup.php" title="Create an  account.">Signup</a></li>
+                        <li> <a href="#" title="About thie webapp.">About</a></li>
+                </ul>
+	</nav>
+
+	<h2 id ="title">Log In</h2>
+	<form method="post" action="login.php">
 		<div id="user-input">
                         <label>Username</label>
                         <input type="text" name="username">
@@ -17,7 +26,7 @@
                         <input type="password" name="password">
                 </div>
                 <div id="user-input">
-                        <button type="submit" name="signin" id="btn">Sign In</button>
+                        <button type="submit" name=login" id="btn">Sign In</button>
                 </div>
 
                 <p>Don't have an account? <a href="signup.php">Sign Up</a></p>

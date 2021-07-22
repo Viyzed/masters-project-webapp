@@ -1,3 +1,4 @@
+<?php include('scripts/db.php'); ?>
 <!doctype html>
 <html>
 <head>
@@ -6,9 +7,20 @@
 </head>
 
 <body>
-        <h2>Sign Up</h2>
+	<!-- Navigation pane -->
+	<nav>
+                <ul>
+                        <li> <a href="index.php" title="Go to homepage.">Home</a></li>
+                        <li> <a href="login.php" title="Login to an existing account.">Login</a></li>
+                        <li> <a href="#" title="About thie webapp.">About</a></li>
+                </ul>
+        </nav>	
+
+	<!-- Signup form -->
+        <h2 id="title">Sign Up</h2>
 	<form method="post" action="signup.php">
 		<!-- handle form errors -->
+		<?php include('scripts/errors.php'); ?>
 		<div id="user-input">
 			<label>Username</label>
 			<input type="text" name="username" value="<?php echo $username; ?>">
