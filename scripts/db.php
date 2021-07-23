@@ -87,7 +87,6 @@
                         	$_SESSION['username'] = $username;
                         	header('location: index.php'); //redirect to the home page
 			} else {
-				echo("Login unsuccessful.");
 				array_push($errors, "The username/password is incorrect.");
 			}
 		}
