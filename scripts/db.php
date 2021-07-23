@@ -56,7 +56,6 @@
 			}
 			mysqli_close($connect);
 			$_SESSION['username'] = $username;
-			$_SESSION['success'] = ("Welcome,  $username");
 			header('location: index.php'); //redirect to the home page
 		}
 	}
