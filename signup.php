@@ -3,7 +3,8 @@
 <html>
 <head>
         <title>SignUp</title>
-        <link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=0.5">
 	<?php if(isset($_SESSION['username'])) { header('location: index.php'); } ?>
 </head>
 
