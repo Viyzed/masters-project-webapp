@@ -14,14 +14,28 @@ if(isset($_GET['city'])) {
 		$api_url = $api_prefix . "/current.json" . $api_key . "&q=" . $_SESSION['city'] . "&aqi=no";
 		$api_return = file_get_contents($api_url);
 		$api_array = json_decode($api_return, true);
-		$api_output = $api_array['location']['name']." is currently ".$api_array['current']['condition']['text'].", ".$api_array['current']['temp_c']."C (".$api_array['current']['temp_f']."F)";
+		$api_output = $api_array['location']['name']." is currently: ".$api_array['current']['condition']['text'].", ".$api_array['current']['temp_c']."C (".$api_array['current']['temp_f']."F)";
 		
 		$_SESSION['city_weather'] = $api_output;
+		
+		$api_url = $api_prefix . "/forecast.json" . $api_key . "&q=" . $_SESSION['city'] . "&days=2&aqi=no&alerts=no";
+		$api_return = file_get_contents($api_url);
+		$api_array = json_decode($api_return, true);
+		$api_output = "<br />The forecast for this afternoon is: ".$api_array['forecast']['forecastday'][0]['hour'][13]['condition']['text'].", ".$api_array['forecast']['forecastday'][0]['hour'][13]['temp_c']."C (".$api_array['forecast']['forecastday'][0]['hour'][13]['temp_f']."F)";
+
+		$_SESSION['city_weather'] .= $api_output;
+		
+		$api_url = $api_prefix . "/forecast.json" . $api_key . "&q=" . $_SESSION['city'] . "&days=2&aqi=no&alerts=no";
+		$api_return = file_get_contents($api_url);
+		$api_array = json_decode($api_return, true);
+		$api_output = "<br />The forecast for this evening is: ".$api_array['forecast']['forecastday'][0]['hour'][19]['condition']['text'].", ".$api_array['forecast']['forecastday'][0]['hour'][19]['temp_c']."C (".$api_array['forecast']['forecastday'][0]['hour'][19]['temp_f']."F)";
+
+		$_SESSION['city_weather'] .= $api_output;
 
 		$api_url = $api_prefix . "/forecast.json" . $api_key . "&q=" . $_SESSION['city'] . "&days=2&aqi=no&alerts=no";
 		$api_return = file_get_contents($api_url);
 		$api_array = json_decode($api_return, true);
-		$api_output = "<br />The forecast for tomorrow is ".$api_array['forecast']['forecastday'][1]['day']['condition']['text'].", ".$api_array['forecast']['forecastday'][1]['day']['avgtemp_c']."C (".$api_array['forecast']['forecastday'][1]['day']['avgtemp_f']."F)";
+		$api_output = "<br />The forecast for tomorrow is: ".$api_array['forecast']['forecastday'][1]['day']['condition']['text'].", ".$api_array['forecast']['forecastday'][1]['day']['avgtemp_c']."C (".$api_array['forecast']['forecastday'][1]['day']['avgtemp_f']."F)";
 
 		$_SESSION['city_weather'] .= $api_output;
 
@@ -31,7 +45,7 @@ if(isset($_GET['city'])) {
                 $api_url = $api_prefix . "/current.json" . $api_key . "&q=" . $_SESSION['city'] . "&aqi=no";
                 $api_return = file_get_contents($api_url);
                 $api_array = json_decode($api_return, true);
-                $api_output = $api_array['location']['name']." is currently ".$api_array['current']['condition']['text'].", ".$api_array['current']['temp_c']."C (".$api_array['current']['temp_f']."F)<br /><b>Signup/Login for tomorrow's forecast...</b>";
+                $api_output = $api_array['location']['name']." is currently: ".$api_array['current']['condition']['text'].", ".$api_array['current']['temp_c']."C (".$api_array['current']['temp_f']."F)<br /><b>Signup/Login for forecasts...</b>";
 		
 		$_SESSION['city_weather'] = $api_output;
 	}

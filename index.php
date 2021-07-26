@@ -9,7 +9,10 @@
 	<title>WeatherApp</title>
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=0.5"> 
+	<meta name="description" content="This UK Weather App gives weather information for UK regions such as London, Edinburgh, Glasgow, Aberdeen, Cardiff, Belfast and Dublin. Sign in to get forecasts."/>	
+	<meta name="keywords" content="weather, forecast, uk, scotland, england, wales, ireland, london, aberdeen, edinburgh, glasgow, belfast, dublin, cardiff, turriff, aberlour"/>
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="icon" href="icons/weather.ico">
 </head>
 
 <body>
@@ -56,6 +59,7 @@
 			<li><input name="city" type="submit" id="weather_btn" value="Cardiff"></li>
 			<li><input name="city" type="submit" id="weather_btn" value="Aberdeen"></li>
 			<li><input name="city" type="submit" id="weather_btn" value="Turriff"></li>
+			<li><input name="city" type="submit" id="weather_btn" value="Aberlour"></li>
 		</ul>
 		</form>
 	</div>

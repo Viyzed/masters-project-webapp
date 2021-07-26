@@ -4,7 +4,9 @@
 <head>
 	<title>LogIn</title>
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="icon" href="icons/weather.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=0.5">
+	<meta charset="utf-8"/>
 	<?php if(isset($_SESSION['username'])) { header('location: index.php'); } ?>
 </head>
 
