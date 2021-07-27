@@ -47,15 +47,20 @@
 	<div id="container">
 
 		<h2 id="OMDb-title">This webapp usesd the WeatherAPI API</h2>
+		
+		<p id="about-text"> &nbsp </p>
+		
 		<p id="about-text">The weatherapi API returns weather information about any geolocation.</p>
    		<p id="about-text">The home page of the API can be found at: <a href="https://www.weatherapi.com/">weatherapi.com</a></p>
-		<p id="about-text"> </p>
-		<p id="about-text"> </p>
+		<p id="about-text"> &nbsp </p>
+		
 		<hr>
 
-	<p id="about-text"> </p>
-	<h2>This site is hosted on an Nginx Server</h2>
-	<p id="about-text"> </p>
+		<p id="about-text"> &nbsp </p>
+		
+		<h2>This site is hosted on an Nginx Server</h2>
+		
+		<p id="about-text"> &nbsp </p>
 
 		<p id="about-text"> </p>
 		<p id="about-text">NGINX is an <a href="https://github.com/nginx/nginx">open source</a> software server for cloud computing </p>
@@ -65,4 +70,3 @@
 
 </body>
 </html>
-
