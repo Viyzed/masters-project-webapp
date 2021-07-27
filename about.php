@@ -10,6 +10,7 @@
 	<meta charset="utf-8"/> 
 	<meta name="viewport" content="width=device-width, initial-scale=0.5">
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="icon" href="icons/weather.ico">
 </head>
 
 <body>
@@ -46,12 +47,19 @@
 	<div id="container">
 
 		<h2 id="OMDb-title">This webapp usesd the WeatherAPI API</h2>
-		<br>
-        	<p id="about-text">The weatherapi API returns weather information about any geolocation.<br>The home page of the API can be found at: <a href="https://www.weatherapi.com/">weatherapi.com</a></p><hr>
-		<h2>This site is hosted on an Nginx Server</h2>
-		<br>
-		<p id="about-text">NGINX is an <a href="https://github.com/nginx/nginx">open source</a> software server for cloud computing and is maintained by <a href="https://www.nginx.com/about/">NGINX</a></p>
-	
+		<p id="about-text">The weatherapi API returns weather information about any geolocation.</p>
+   		<p id="about-text">The home page of the API can be found at: <a href="https://www.weatherapi.com/">weatherapi.com</a></p>
+		<p id="about-text"> </p>
+		<p id="about-text"> </p>
+		<hr>
+
+	<p id="about-text"> </p>
+	<h2>This site is hosted on an Nginx Server</h2>
+	<p id="about-text"> </p>
+
+		<p id="about-text"> </p>
+		<p id="about-text">NGINX is an <a href="https://github.com/nginx/nginx">open source</a> software server for cloud computing </p>
+		<p id="about-text">and is maintained by <a href="https://www.nginx.com/about/">NGINX</a></p>
 
 	</div>
 

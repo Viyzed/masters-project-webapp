@@ -1,5 +1,5 @@
 <?php 
-	//Start PHP session
+//Start PHP session
 	session_start();
 
 	$errors = array();
@@ -11,6 +11,9 @@
 	$dbpasswd = "Pa\$\$w0rd!";
 	$db = "masters_maria_db";
 
+	$server_b = "masters-maria-db-b.cohsjxuibh07.eu-west-1.rds.amazonaws.com";
+	$db_b = "masters_maria_db_b"; 
+
 	//open MariaDB connection
 	try 
 	{
@@ -18,7 +21,36 @@
 	}
 	catch(PDOException $e)
 	{
-		echo $e->getMessage();
+		echo($e->getMessage());
+	}
+
+	if (isset($_SESSION['username'])) {
+		
+
+		//open MariaDB connection
+        	try
+        	{
+                	$connect_b = mysqli_connect($server_b, $dbuser, $dbpasswd, $db_b);
+        	}
+        	catch(PDOException $e)
+        	{
+                	echo($e->getMessage());
+		}
+
+		$username = $_SESSION['username'];
+		$query = "INSERT INTO activity(username) VALUES('$username')";
+
+		try 
+		{
+			mysqli_query($connect_b, "INSERT INTO activity(time, username) VALUES(NOW(), '$username');");
+		}
+		catch(PDOException $e) 
+		{
+			echo($e->getMessage());
+		}
+
+		mysqli_close($connect_b);
+
 	}
 	 
 	//HTTP post request through the Sign Up button
