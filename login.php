@@ -1,3 +1,4 @@
+<!-- run the db script to log all user activity -->
 <?php include('scripts/db.php'); ?>
 <!doctype html>
 <html>
@@ -7,6 +8,7 @@
 	<link rel="icon" href="icons/weather.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=0.5">
 	<meta charset="utf-8"/>
+	<!-- if the user session is active redirect to the homepage -->
 	<?php if(isset($_SESSION['username'])) { header('location: index.php'); } ?>
 </head>
 
@@ -22,6 +24,7 @@
 
 	<h2 id ="title">Log In</h2>
 	<form id="user_form" method="post" action="login.php">
+		<!-- check for errors in username/password combination -->
 		<?php include('scripts/errors.php'); ?>
 		<div id="user-input">
                         <label>Username</label>

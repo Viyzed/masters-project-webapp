@@ -1,3 +1,4 @@
+<!-- run the db script to log user activity -->
 <?php 
 	include('scripts/db.php');
 ?>

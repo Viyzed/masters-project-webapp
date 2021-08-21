@@ -14,7 +14,6 @@ body {
 	flex-direction: column;
 }
 
-/* This should be city-list but it was too late to change it. */
 #country-list {
 	width: 40%;
 	margin: 0px auto;

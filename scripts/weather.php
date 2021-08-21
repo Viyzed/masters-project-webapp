@@ -5,10 +5,10 @@ $api_key = "?key=fa7160d8737048e1896180049212207";
 $api_prefix = "https://api.weatherapi.com/v1";
 $api_url = "";
 
-//Enable buttons if user is logged in
+//enable buttons if user is logged in
 if(isset($_GET['city'])) {
 	
-	//If a city button is pressed
+	//if a city button is pressed, send request to weatherapi with button text value as the city parameter
 	if(isset($_SESSION['username'])) {
 		$_SESSION['city'] = $_GET['city'];
 		$api_url = $api_prefix . "/current.json" . $api_key . "&q=" . $_SESSION['city'] . "&aqi=no";
@@ -40,6 +40,8 @@ if(isset($_GET['city'])) {
 		$_SESSION['city_weather'] .= $api_output;
 
 	}
+
+	//if the user session is not active, show less information
 	else {
 		$_SESSION['city'] = $_GET['city'];
                 $api_url = $api_prefix . "/current.json" . $api_key . "&q=" . $_SESSION['city'] . "&aqi=no";

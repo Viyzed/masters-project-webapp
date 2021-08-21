@@ -1,20 +1,24 @@
 <?php 
-//Start PHP session
+	//Start PHP session
 	session_start();
 
+	//array to store signup/login form errors
 	$errors = array();
+
 	$username = "";
 	$query = "";
 
+	//mariadb connection for login/signup
 	$server = "masters-maria-db.cohsjxuibh07.eu-west-1.rds.amazonaws.com";
 	$dbuser = "admin";
 	$dbpasswd = "Pa\$\$w0rd!";
 	$db = "masters_maria_db";
 
+	//mariadb connection for logging user activity
 	$server_b = "masters-maria-db-b.cohsjxuibh07.eu-west-1.rds.amazonaws.com";
 	$db_b = "masters_maria_db_b"; 
 
-	//open MariaDB connection
+	//open login MariaDB connection
 	try 
 	{
 		$connect = mysqli_connect($server, $dbuser, $dbpasswd, $db);
@@ -24,10 +28,11 @@
 		echo($e->getMessage());
 	}
 
+	//if user session is active
 	if (isset($_SESSION['username'])) {
 		
 
-		//open MariaDB connection
+		//open logging MariaDB connection
         	try
         	{
                 	$connect_b = mysqli_connect($server_b, $dbuser, $dbpasswd, $db_b);
@@ -39,7 +44,8 @@
 
 		$username = $_SESSION['username'];
 		$query = "INSERT INTO activity(username) VALUES('$username')";
-
+		
+		//log user activity
 		try 
 		{
 			mysqli_query($connect_b, "INSERT INTO activity(time, username) VALUES(NOW(), '$username');");
