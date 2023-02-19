@@ -6,7 +6,7 @@ Weather webapp for 2021  Cyber Security Masters Project.
 
 The weatherapi API returns weather information about any geolocation.
 
-The home page of the API can be found at: weatherapi.com
+The home page of the API can be found at: weatherapi.com [UPDATE] This page has since been taken offline. 
 
 
 # this site is hosted on an Nginx Server
